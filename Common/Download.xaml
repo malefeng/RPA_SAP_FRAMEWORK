@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>560.666666666667,2306.66666666667</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>560.666666666667,2266.66666666667</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Download_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="21">
@@ -35,7 +35,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="25">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="50">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -61,6 +61,8 @@
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Java.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Python</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Download" sap:VirtualizedContainerService.HintSize="540.666666666667,2206.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -367,7 +369,7 @@
               </sap:WorkflowViewStateService.ViewState>
             </ui:Click>
           </Sequence>
-          <Sequence DisplayName="Check result" sap:VirtualizedContainerService.HintSize="418,69.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence DisplayName="Check result" sap:VirtualizedContainerService.HintSize="304,339.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_5">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="exist" />
             </Sequence.Variables>
@@ -385,22 +387,22 @@
                 <InArgument x:TypeArguments="ui:GenericValue">[Now.AddMilliseconds( MaxDownloadTime)]</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:InterruptibleDoWhile Condition="[Now.CompareTo(overTime) &gt; 0 Or not exist]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="412.666666666667,504.666666666667" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+            <ui:InterruptibleDoWhile Condition="[Now.CompareTo(overTime) &lt; 0 AndAlso not exist]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="454.666666666667,726" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
               <ui:InterruptibleDoWhile.Body>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,335.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="418,556.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_11">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence DisplayName="May exist" sap:VirtualizedContainerService.HintSize="334,69.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                  <Sequence DisplayName="May exist" sap:VirtualizedContainerService.HintSize="376,290.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_10">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:UiElementExists DisplayName="Element Exists 'saplogon.exe SAP'" Exists="[exist]" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="UiElementExists_4">
+                    <ui:UiElementExists DisplayName="Element Exists 'saplogon.exe SAP'" Exists="[exist]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_4">
                       <ui:UiElementExists.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7bf57e00-3611-4de0-a0b2-7e845ac7bc62" InformativeScreenshot="bfb6112b6a4f6a45bc5f72212d88b17f" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='SAP GUI Security' idx='*' /&gt;" TimeoutMS="2000">
                           <ui:Target.WaitForReady>
@@ -410,12 +412,12 @@
                       </ui:UiElementExists.Target>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:UiElementExists>
-                    <If Condition="[exist]" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="If_3">
+                    <If Condition="[exist]" sap:VirtualizedContainerService.HintSize="334,52.6666666666667" sap2010:WorkflowViewState.IdRef="If_3">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -477,7 +479,7 @@
                       </If.Then>
                     </If>
                   </Sequence>
-                  <ui:TextExists FormattedText="{x:Null}" DisplayName="Text Exists 'Statusbar Download'" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TextExists_2" Occurrence="1" Result="[exist]" Text="Download">
+                  <ui:TextExists FormattedText="{x:Null}" DisplayName="Text Exists 'Statusbar Download'" sap:VirtualizedContainerService.HintSize="376,134" sap2010:WorkflowViewState.IdRef="TextExists_2" Occurrence="1" Result="[exist]" Text="Download">
                     <ui:TextExists.Target>
                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="17f7413b-d6dd-4774-80b3-d0aea551d01a" InformativeScreenshot="0b25e56dfdaa2a5e41d03a2815cf00d1" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='EMEA Product Pricing' /&gt;&lt;sap id='sbar' /&gt;" TimeoutMS="[MaxDownloadTime]">
                         <ui:Target.WaitForReady>

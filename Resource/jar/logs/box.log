@@ -1,0 +1,46 @@
+2021-03-18 18:11:13 Main.java INFO Params: filePath: d://, fileNames: IDOCTOR 20210316.csv, boxFolderId: 112473806695 
+2021-03-18 18:11:13 Main.java INFO   Box Connecting 。。。
+2021-03-18 18:11:41 Main.java INFO Box Connect Success
+2021-03-18 18:11:41 Main.java INFO [Beginning Upload]: IDOCTOR 20210316.csv
+2021-03-18 18:19:10 Main.java INFO Params: filePath: d://, fileNames: IDOCTOR 20210316.csv, boxFolderId: 130765491462 
+2021-03-18 18:19:10 Main.java INFO   Box Connecting 。。。
+2021-03-18 18:19:25 Main.java INFO Box Connect Success
+2021-03-18 18:19:25 Main.java INFO [Beginning Upload]: IDOCTOR 20210316.csv
+2021-03-19 09:37:01 Main.java INFO Params: filePath: d://, fileNames: IDOCTOR 20210316.csv, boxFolderId: 130766019403 
+2021-03-19 09:37:01 Main.java INFO   Box Connecting 。。。
+2021-03-19 09:37:35 Main.java ERROR Box Connect Failed ：Couldn't connect to the Box API due to a network error.
+2021-03-19 09:37:35 Main.java INFO [Return Failed Files]: IDOCTOR 20210316.csv
+2021-03-19 09:42:07 Main.java INFO Params: filePath: D:\, fileNames: IDOCTOR 20210316.csv, boxFolderId: 130766019403 
+2021-03-19 09:42:07 Main.java INFO   Box Connecting 。。。
+2021-03-19 09:42:30 Main.java ERROR Box Connect Failed ：Couldn't connect to the Box API due to a network error.
+2021-03-19 09:42:30 Main.java INFO [Return Failed Files]: IDOCTOR 20210316.csv
+2021-04-20 18:22:16 Main.java INFO Params: filePath: /Users/dijiangtao/Desktop/, fileNames: ZSDVBAK_20210303.csv, boxFolderId: 130765750908 
+2021-04-20 18:22:16 Main.java INFO   Box Connecting
+2021-04-20 18:22:19 Main.java INFO Box Connect Success
+2021-04-20 18:23:19 Main.java INFO Params: filePath: C:\SAP_Recon_Bot\Interim_File_ZSD_SLS_ORD_STAT\csv" TW, fileNames: SZ_20210419.csv TW, boxFolderId: SZ_20210419.csv 
+2021-04-20 18:23:19 Main.java INFO   Box Connecting 。。。
+2021-04-20 18:23:30 Main.java INFO Box Connect Success
+2021-04-20 18:24:56 Main.java INFO Params: filePath: /Users/dijiangtao/Desktop/, fileNames: ZSDVBAK_20210303.csv, boxFolderId: 130765750908 
+2021-04-20 18:24:56 Main.java INFO   Box Connecting
+2021-04-20 18:24:59 Main.java INFO Box Connect Success
+2021-04-20 18:27:40 Main.java INFO Params: filePath: C:\\SAP_Recon_Bot\\Interim_File_ZSD_SLS_ORD_STAT\\csv\, fileNames: TW SZ_20210419.csv, boxFolderId: 114207240293 
+2021-04-20 18:27:40 Main.java INFO   Box Connecting ...
+2021-04-20 18:27:44 Main.java INFO Box Connect Success
+2021-04-20 18:27:44 Main.java INFO [Beginning Upload]: TW SZ_20210419.csv
+2021-04-20 18:27:48 Main.java INFO [Upload Finish]: TW SZ_20210419.csv
+2021-04-20 18:27:48 Main.java INFO [Return Failed Files]: 
+2021-04-20 19:06:20 Main.java INFO Params: filePath: C:\\SAP_Recon_Bot\\Interim_File_ZSD_SLS_ORD_STAT\\csv\, fileNames: TW SZ_20210419.csv, boxFolderId: 114207240293 
+2021-04-20 19:06:20 Main.java INFO   Box Connecting ...
+2021-04-20 19:06:24 Main.java INFO Box Connect Success
+2021-04-20 19:06:24 Main.java INFO [Beginning Upload]: TW SZ_20210419.csv
+2021-04-20 19:06:28 Main.java INFO [Upload Finish]: TW SZ_20210419.csv
+2021-04-20 19:06:28 Main.java INFO [Return Failed Files]: 
+2021-04-20 19:25:26 Main.java INFO Params: filePath: C:\\SAP_Recon_Bot\\Interim_File_ZSD_SLS_ORD_STAT\\csv\, fileNames: TW SZ_20210419.csv, boxFolderId: 114207240293 
+2021-04-20 19:25:26 Main.java INFO   Box Connecting ...
+2021-04-20 19:25:30 Main.java INFO Box Connect Success
+2021-04-20 19:25:30 Main.java INFO [Beginning Upload]: TW SZ_20210419.csv
+2021-04-20 19:25:34 Main.java INFO [Upload Finish]: TW SZ_20210419.csv
+2021-04-20 19:25:34 Main.java INFO [Return Failed Files]: 
+2021-04-28 23:27:35 Main.java INFO Params: filePath: C:\SAP_Recon_Bot\LocalFilePath_ZSD_IDOCTOR\csv\, fileNames: C:\SAP_Recon_Bot\LocalFilePath_ZSD_IDOCTOR\csv\IDOCTOR, boxFolderId: 20210427.csv 
+2021-04-28 23:27:35 Main.java INFO   Box Connecting ...
+2021-04-28 23:27:40 Main.java INFO Box Connect Success

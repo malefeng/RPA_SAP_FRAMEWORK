@@ -4,11 +4,12 @@
     <x:Property Name="condition_type_configuration_map" Type="InArgument(scg:Dictionary(x:String, x:String))" />
     <x:Property Name="metrailConfigFilePath" Type="InArgument(x:String)" />
     <x:Property Name="general_configuration_map" Type="InArgument(scg:Dictionary(x:String, x:String))" />
+    <x:Property Name="File_Type_Dict" Type="OutArgument(scg:Dictionary(x:String, x:String))" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>524,1728</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>262,423.333333333333</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SetFilter_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="21">
@@ -63,9 +64,10 @@
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Python</AssemblyReference>
+      <AssemblyReference>UiPath.Java.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SetFilter" sap:VirtualizedContainerService.HintSize="504,1628" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SetFilter" sap:VirtualizedContainerService.HintSize="382.666666666667,1108.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="beginDate" />
       <Variable x:TypeArguments="x:String" Name="endDate" />
@@ -77,7 +79,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Init" sap:VirtualizedContainerService.HintSize="462,69.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence DisplayName="Init" sap:VirtualizedContainerService.HintSize="340.666666666667,69.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -113,8 +115,16 @@
           <InArgument x:TypeArguments="x:Int32">[Int32.Parse(general_configuration_map("DownloadMaxDuration")) * 1000]</InArgument>
         </Assign.Value>
       </Assign>
+      <Assign sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_4">
+        <Assign.To>
+          <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">[File_Type_Dict]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">[new Dictionary(of string,string)]</InArgument>
+        </Assign.Value>
+      </Assign>
     </Sequence>
-    <Sequence DisplayName="Set date range" sap:VirtualizedContainerService.HintSize="462,69.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence DisplayName="Set date range" sap:VirtualizedContainerService.HintSize="340.666666666667,69.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_4">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -158,13 +168,13 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:SetValue>
     </Sequence>
-    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each priceList" sap:VirtualizedContainerService.HintSize="462,1317.33333333333" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[price_list_configuration_map.Keys]">
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each priceList" sap:VirtualizedContainerService.HintSize="340.666666666667,663.333333333333" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[price_list_configuration_map.Keys]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:String">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:String" Name="priceList" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="priceList pool" sap:VirtualizedContainerService.HintSize="425.333333333333,1178.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_10">
+          <Sequence DisplayName="priceList pool" sap:VirtualizedContainerService.HintSize="304,524.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_10">
             <Sequence.Variables>
               <Variable x:TypeArguments="scg:List(x:String)" Name="metrialList" />
               <Variable x:TypeArguments="x:String" Name="fileName" />
@@ -174,7 +184,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text price list" sap:VirtualizedContainerService.HintSize="383.333333333333,52.6666666666667" sap2010:WorkflowViewState.IdRef="SetValue_1" Text="[price_list_configuration_map(priceList)]">
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Price List" sap:VirtualizedContainerService.HintSize="262,52.6666666666667" sap2010:WorkflowViewState.IdRef="SetValue_1" Text="[price_list_configuration_map(priceList)]">
               <ui:SetValue.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="691f4a7f-ffc5-44fd-9acf-02c255c995a8" InformativeScreenshot="291c5fa401eae221fb696c24617ea766" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='EMEA Product Pricing' /&gt;&lt;sap id='usr/ctxtP_1-LOW' /&gt;">
                   <ui:Target.TimeoutMS>
@@ -192,7 +202,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:SetValue>
-            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke GeneralFileName workflow" sap:VirtualizedContainerService.HintSize="383.333333333333,52.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Common\GeneralFileName.xaml">
+            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="GeneralFileName" sap:VirtualizedContainerService.HintSize="262,52.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="True" WorkflowFileName="Common\GeneralFileName.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <InArgument x:TypeArguments="x:String" x:Key="zoon">[priceList]</InArgument>
                 <OutArgument x:TypeArguments="x:String" x:Key="fileName">[fileName]</OutArgument>
@@ -204,7 +214,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:InvokeWorkflowFile>
-            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Get Metrial" sap:VirtualizedContainerService.HintSize="383.333333333333,52.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="True" WorkflowFileName="Common\GetMetrial.xaml">
+            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Get Metrial" sap:VirtualizedContainerService.HintSize="262,52.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="True" WorkflowFileName="Common\GetMetrial.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <InArgument x:TypeArguments="x:String" x:Key="FilePath">[metrailConfigFilePath]</InArgument>
                 <InArgument x:TypeArguments="x:String" x:Key="Zoon">[priceList]</InArgument>
@@ -218,7 +228,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:InvokeWorkflowFile>
-            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each metrialStr" sap:VirtualizedContainerService.HintSize="383.333333333333,808.666666666667" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[metrialList]">
+            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each metrialStr" sap:VirtualizedContainerService.HintSize="262,52.6666666666667" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[metrialList]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="x:String">
                   <ActivityAction.Argument>
@@ -256,7 +266,7 @@
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'CTextField Condition'" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[condition_type]">
+                            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Set Condition_type" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[condition_type]">
                               <ui:TypeInto.Target>
                                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f7f570c9-05d7-4de3-8270-3a4067d44f51" InformativeScreenshot="2a3185c5430bf6d241c881527ccffa07" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='EMEA Product Pricing' /&gt;&lt;sap id='usr/ctxtKSCHL-LOW' /&gt;">
                                   <ui:Target.TimeoutMS>
@@ -355,11 +365,19 @@
               </ui:ForEach.Body>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:ForEach>
+            <Assign sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_3">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[File_Type_Dict( localFilePath + fileName )]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[priceList]</InArgument>
+              </Assign.Value>
+            </Assign>
           </Sequence>
         </ActivityAction>
       </ui:ForEach.Body>
@@ -370,5 +388,6 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEach>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="340.666666666667,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;导出成功&quot;]" />
   </Sequence>
 </Activity>

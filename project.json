@@ -8,6 +8,7 @@
     "UiPath.Mail.Activities": "[1.9.3]",
     "UiPath.System.Activities": "[20.10.1]",
     "UiPath.Python.Activities": "[1.3.0]",
+    "UiPath.Java.Activities": "[1.0.7495.12930]",
     "UiPath.UIAutomation.Activities": "[20.10.6]"
   },
   "webServices": [],
