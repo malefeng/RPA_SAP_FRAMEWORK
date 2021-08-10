@@ -32,6 +32,17 @@
     },
     {
       "Package": {
+        "Id": "UiPath.Java.Activities",
+        "Version": "1.0.7495.12930"
+      },
+      "Assemblies": [
+        "C:\\Users\\WWan95\\.nuget\\packages\\uipath.java.activities/1.0.7495.12930\\lib/net452/UiPath.Java.Activities.Design.dll",
+        "C:\\Users\\WWan95\\.nuget\\packages\\uipath.java.activities/1.0.7495.12930\\lib/net452/UiPath.Java.Activities.dll",
+        "C:\\Users\\WWan95\\.nuget\\packages\\uipath.java.activities/1.0.7495.12930\\lib/net452/UiPath.Java.dll"
+      ]
+    },
+    {
+      "Package": {
         "Id": "UiPath.Mail.Activities",
         "Version": "1.9.3"
       },
@@ -862,6 +873,11 @@
           "Item2": "[1.0.0, )"
         }
       ]
+    },
+    "UiPath.Java.Activities": {
+      "Id": "UiPath.Java.Activities",
+      "Version": "1.0.7495.12930",
+      "Dependencies": []
     },
     "UiPath.Mail.Activities": {
       "Id": "UiPath.Mail.Activities",
