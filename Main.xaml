@@ -389,20 +389,20 @@
               <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="flow_state" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_1" />
             </Transition.Condition>
             <Transition.To>
-              <State x:Name="__ReferenceID2" DisplayName="业务逻辑处理" sap:VirtualizedContainerService.HintSize="606,1653.33333333333" sap2010:WorkflowViewState.IdRef="State_4">
+              <State x:Name="__ReferenceID2" DisplayName="业务逻辑处理" sap:VirtualizedContainerService.HintSize="134,61.3333333333333" sap2010:WorkflowViewState.IdRef="State_4">
                 <State.Entry>
-                  <Sequence sap:VirtualizedContainerService.HintSize="559.333333333333,1254.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                  <Sequence sap:VirtualizedContainerService.HintSize="480.666666666667,1022.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_43">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="517.333333333333,1162.66666666667" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438.666666666667,930.666666666667" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                       <TryCatch.Variables>
                         <Variable x:TypeArguments="sd:DataTable" Name="config_dataTable" />
                       </TryCatch.Variables>
                       <TryCatch.Try>
-                        <Sequence DisplayName="sap导出" sap:VirtualizedContainerService.HintSize="478.666666666667,901.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                        <Sequence DisplayName="sap导出" sap:VirtualizedContainerService.HintSize="376,669.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_40">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="x:String" Name="uploadResultStr" />
                             <Variable x:TypeArguments="scg:Dictionary(x:String, scg:List(x:String))" Name="File_Type_Dict" />
@@ -413,41 +413,30 @@
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436.666666666667,316" sap2010:WorkflowViewState.IdRef="CommentOut_5">
-                            <ui:CommentOut.Body>
-                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,237.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_117">
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="SAP Login" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="True" WorkflowFileName="Common\SAP Login.xaml">
-                                  <ui:InvokeWorkflowFile.Arguments>
-                                    <InArgument x:TypeArguments="x:String" x:Key="SAP_account_key">[general_configuration_map("SAP_Account_Key").ToString]</InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="Connection_Name">[general_configuration_map("SystemEnvironmentName").ToString]</InArgument>
-                                  </ui:InvokeWorkflowFile.Arguments>
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                </ui:InvokeWorkflowFile>
-                                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Set T-Code" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="True" WorkflowFileName="Common\Set T-Code.xaml">
-                                  <ui:InvokeWorkflowFile.Arguments>
-                                    <InArgument x:TypeArguments="x:String" x:Key="TCODE">[general_configuration_map("T-Code")]</InArgument>
-                                  </ui:InvokeWorkflowFile.Arguments>
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                </ui:InvokeWorkflowFile>
-                              </Sequence>
-                            </ui:CommentOut.Body>
-                          </ui:CommentOut>
-                          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="SetFilter &amp; Download" sap:VirtualizedContainerService.HintSize="436.666666666667,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="True" WorkflowFileName="Common/SetFilterAndDownload.xaml">
+                          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="SAP Login" sap:VirtualizedContainerService.HintSize="334,52.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="True" WorkflowFileName="Common\SAP Login.xaml">
+                            <ui:InvokeWorkflowFile.Arguments>
+                              <InArgument x:TypeArguments="x:String" x:Key="SAP_account_key">[general_configuration_map("SAP_Account_Key").ToString]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="Connection_Name">[general_configuration_map("SystemEnvironmentName").ToString]</InArgument>
+                            </ui:InvokeWorkflowFile.Arguments>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:InvokeWorkflowFile>
+                          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Set T-Code" sap:VirtualizedContainerService.HintSize="334,52.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="True" WorkflowFileName="Common\Set T-Code.xaml">
+                            <ui:InvokeWorkflowFile.Arguments>
+                              <InArgument x:TypeArguments="x:String" x:Key="TCODE">[general_configuration_map("T-Code")]</InArgument>
+                            </ui:InvokeWorkflowFile.Arguments>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:InvokeWorkflowFile>
+                          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="SetFilter &amp; Download" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="True" WorkflowFileName="Common/SetFilterAndDownload.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
                               <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="price_list_configuration_map">[price_list_configuration_map]</InArgument>
                               <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="condition_type_configuration_map">[condition_type_configuration_map]</InArgument>
@@ -455,6 +444,7 @@
                               <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="general_configuration_map">[general_configuration_map]</InArgument>
                               <OutArgument x:TypeArguments="scg:Dictionary(x:String, scg:List(x:String))" x:Key="File_Type_Dict">[File_Type_Dict]</OutArgument>
                               <InArgument x:TypeArguments="x:String" x:Key="general_configuration_file_path">[general_configuration_file_path]</InArgument>
+                              <OutArgument x:TypeArguments="x:String" x:Key="email_title_tag">[email_title_tag]</OutArgument>
                             </ui:InvokeWorkflowFile.Arguments>
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -463,14 +453,14 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </ui:InvokeWorkflowFile>
-                          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke TransformExcel workflow" sap:VirtualizedContainerService.HintSize="436.666666666667,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="True" WorkflowFileName="Common\TransformExcel.xaml">
+                          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke TransformExcel workflow" sap:VirtualizedContainerService.HintSize="334,52.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="True" WorkflowFileName="Common\TransformExcel.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
                               <InArgument x:TypeArguments="scg:Dictionary(x:String, scg:List(x:String))" x:Key="File_Type_Dict">[File_Type_Dict]</InArgument>
                               <InArgument x:TypeArguments="x:String" x:Key="file_path">[general_configuration_map("LocalFilePath")]</InArgument>
                             </ui:InvokeWorkflowFile.Arguments>
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
@@ -684,17 +674,17 @@
                       <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="flow_state" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_2" />
                     </Transition.Condition>
                     <Transition.To>
-                      <State x:Name="__ReferenceID0" DisplayName="通知" sap:VirtualizedContainerService.HintSize="134,61.3333333333333" sap2010:WorkflowViewState.IdRef="State_2">
+                      <State x:Name="__ReferenceID0" DisplayName="通知" sap:VirtualizedContainerService.HintSize="865.333333333333,1786.66666666667" sap2010:WorkflowViewState.IdRef="State_2">
                         <State.Entry>
-                          <Sequence sap:VirtualizedContainerService.HintSize="480.666666666667,424.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_49">
+                          <Sequence sap:VirtualizedContainerService.HintSize="818.666666666667,1417.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_49">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438.666666666667,332.666666666667" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+                            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="776.666666666667,1325.33333333333" sap2010:WorkflowViewState.IdRef="TryCatch_3">
                               <TryCatch.Try>
-                                <Sequence sap:VirtualizedContainerService.HintSize="738,1250.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                                <Sequence sap:VirtualizedContainerService.HintSize="738,1087.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_48">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -708,10 +698,11 @@
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                   </ui:LogMessage>
-                                  <Sequence DisplayName="init" sap:VirtualizedContainerService.HintSize="696,232.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_112">
+                                  <Sequence DisplayName="init" sap:VirtualizedContainerService.HintSize="696,69.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_112">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                     <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="GC-BOT_EMAIL_PSDW" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="444,140.666666666667" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
@@ -756,7 +747,7 @@
                                               <OutArgument x:TypeArguments="x:String">[email_title]</OutArgument>
                                             </Assign.To>
                                             <Assign.Value>
-                                              <InArgument x:TypeArguments="x:String">["【SAP_Mini】 success"]</InArgument>
+                                              <InArgument x:TypeArguments="x:String">[email_title_tag &amp; " success"]</InArgument>
                                             </Assign.Value>
                                           </Assign>
                                           <Assign sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_19">
@@ -764,7 +755,7 @@
                                               <OutArgument x:TypeArguments="x:String">[email_content]</OutArgument>
                                             </Assign.To>
                                             <Assign.Value>
-                                              <InArgument x:TypeArguments="x:String">["the proccess has finished"+environment.NewLine+"Share Folder Path:"]</InArgument>
+                                              <InArgument x:TypeArguments="x:String">["BOX Link: https://nike.ent.box.com/folder/" + general_configuration_map("BOXLinkID")]</InArgument>
                                             </Assign.Value>
                                           </Assign>
                                           <Assign sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_46">
@@ -772,7 +763,7 @@
                                               <OutArgument x:TypeArguments="x:String">[revicer_email_account]</OutArgument>
                                             </Assign.To>
                                             <Assign.Value>
-                                              <InArgument x:TypeArguments="x:String">[general_configuration_map("EmailRevicerAccountAdmin")+";"+general_configuration_map("EmailRevicerAccountCustomer")]</InArgument>
+                                              <InArgument x:TypeArguments="x:String">[general_configuration_map("EmailRevicerAccountCustomer")]</InArgument>
                                             </Assign.Value>
                                           </Assign>
                                         </Sequence>
@@ -790,7 +781,7 @@
                                               <OutArgument x:TypeArguments="x:String">[email_title]</OutArgument>
                                             </Assign.To>
                                             <Assign.Value>
-                                              <InArgument x:TypeArguments="x:String">【SAP_Mini】 fail</InArgument>
+                                              <InArgument x:TypeArguments="x:String">[email_title_tag &amp; " fail"]</InArgument>
                                             </Assign.Value>
                                           </Assign>
                                           <Assign sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_21">
@@ -1119,6 +1110,7 @@
         <Variable x:TypeArguments="x:Int32" Name="DownloadMaxDuration" />
         <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Default="[new Dictionary(of string,string)]" Name="price_list_configuration_map" />
         <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Default="[new Dictionary(of string,string)]" Name="condition_type_configuration_map" />
+        <Variable x:TypeArguments="x:String" Name="email_title_tag" />
       </StateMachine.Variables>
     </StateMachine>
   </Sequence>
