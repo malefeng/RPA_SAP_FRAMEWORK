@@ -1,5 +1,0 @@
-2021-08-10 22:59:41 Main.java INFO Params: filePath: C:\SAP_Recon_Bot\Interim_File\, fileNames: HO22 Product Pricing_CN.xls, boxFolderId: 142613067551 
-2021-08-10 22:59:41 Main.java INFO   Box Connecting ...
-2021-08-10 22:59:45 Main.java INFO Box Connect Success
-2021-08-10 22:59:45 Main.java INFO [Beginning Upload]: HO22 Product Pricing_CN.xls
-2021-08-10 22:59:52 Main.java INFO [Upload Finish]: HO22 Product Pricing_CN.xls
